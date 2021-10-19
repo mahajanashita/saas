@@ -7,6 +7,17 @@ StripeEvent.configure do |events|
     event.type        #=> "charge.failed"
     event.data.object #=> #<Stripe::Charge:0x3fcb34c115f8>
   end 
+  events.subscribe 'charge.succeeded' do |event|
+    event.class       #=> Stripe::Event
+    event.type        #=> "charge.failed"
+    data = event.data.object #=> #<Stripe::Charge:0x3fcb34c115f8>
+
+    
+
+
+  end
+
+
 
 
   events.all do |event|

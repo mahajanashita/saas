@@ -15,6 +15,13 @@ class PostsController < ApplicationController
     @post = Post.new
   end
 
+  def plans
+    render "users/plans"
+
+  
+  end
+
+
   # GET /posts/1/edit
   def edit
   end
